@@ -19,7 +19,7 @@ const COMBOS = [
 export const App = () => {
   const [board, setBoard] = useState<string[]>(new Array(9).fill(null));
   const [turn, setTurn] = useState<string>(TURNS.X);
-  const [winner, setWinner] = useState<null>(null);
+  const [winner, setWinner] = useState<null | string>(null);
 
   const handleBoard = (index: number) => {
     if (board[index] || winner) return;
